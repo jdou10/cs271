@@ -87,7 +87,7 @@ int min(TreeNodePtr treePtr) {
     
     // to return the leftmost value
     while(treePtr -> leftPtr != NULL)
-        treePtr = treePtr -> leftPtr;
+        treePtr = treePtr -> leftPtr
         
         return treePtr -> data;
 } // end min
@@ -102,7 +102,7 @@ int max(TreeNodePtr treePtr) {
      while(treePtr -> rightPtr != NULL)
         treePtr = treePtr -> rightPtr;
      
-        return treePtr -> data;
+        return treePtr->data;
 } // end max
 
 // to return the sum of the values in the tree
