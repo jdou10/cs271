@@ -1,19 +1,10 @@
-# CS 271 - PA 9
-# Program name: makefile
-# Jingru Dou
-# 15 April 2021
+all: classroom
 
+classroom: classroom.o Student.o
+	g++ -std=c++11 classroom.o Student.o -o classroom
 
-all: PA9Test
+classroom.o: classroom.cpp Student.h
+	g++ -std=c++11 -c classroom.cpp
 
-PA9Test: PA9Test.o WindTurbine.o
-	g++ -std=c++11 PA9Test.o WindTurbine.o -o PA9Test
-		
-PA9Test.o: PA9Test.cpp WindTurbine.h
-	g++ -std=c++11 -c PA9Test.cpp 
-	
-WindTurbine.o: WindTurbine.cpp WindTurbine.h
-	g++ -std=c++11 -c WindTurbine.cpp
-	
-clean: 
-	rm -rf *.o
+Student.o: Student.cpp Student.h
+	g++ -std=c++11 -c Student.cpp
